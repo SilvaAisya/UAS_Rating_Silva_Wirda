@@ -25,6 +25,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.silvaaisya.uas_rating_silva_wirda.LoginActivity;
 import com.silvaaisya.uas_rating_silva_wirda.R;
 import com.silvaaisya.uas_rating_silva_wirda.model.IdolModel;
+import com.silvaaisya.uas_rating_silva_wirda.review.ReviewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +33,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements IdolAdapter.OnClickListenerAdapter{
 
     @BindView(R.id.rv_idol)
     RecyclerView rvIdol;
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity{
     private void initListIdol(List<IdolModel> idolModelList){
         adapter = new IdolAdapter(idolModelList);
         rvIdol.setLayoutManager(new LinearLayoutManager(this));
+        adapter.setOnClickListenerAdapter(this);
         rvIdol.setAdapter(adapter);
     }
 
@@ -118,6 +120,11 @@ public class MainActivity extends AppCompatActivity{
     protected void onResume() {
         super.onResume();
         getIdol();
+    }
+
+    @Override
+    public void onItemClicked(String idol) {
+        ReviewActivity.start(this, idol);
     }
 
     @Override

@@ -23,7 +23,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_nama_pasien"
+                    android:id="@+id/tv_nama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_value_10dp"
-                tools:text="Lambat!!! apa yang saya minta selalu saya dapatkan dan tidak pernah buruk pelayanannya, Good Job ya" />
+                tools:text="isi komentar" />
 
             <View
                 android:layout_width="match_parent"
