@@ -10,12 +10,11 @@
         android:id="@+id/cv_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_idol_name"
@@ -25,7 +24,16 @@
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:text="Product Name" />
+                tools:text="Idol Name"/>
+
+            <TextView
+                android:id="@+id/tv_agensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                tools:text="Agensi"/>
 
             <me.zhanghai.android.materialratingbar.MaterialRatingBar
                 android:id="@+id/total_star_rating"
@@ -33,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/margin_value_5dp"
                 android:layout_marginBottom="@dimen/margin_value_5dp"
+                android:layout_marginTop="@dimen/margin_value_5dp"
                 android:isIndicator="true"
                 android:maxHeight="20dp"
                 android:minHeight="20dp"
@@ -46,6 +54,12 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/logoproduce"/>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

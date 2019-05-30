@@ -14,8 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.silvaaisya.uas_rating_silva_wirda.product.MainActivity;
 
-    public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity{
         private EditText txt_email, txt_password;
         private FirebaseAuth firebaseAuth;
 
