@@ -423,6 +423,7 @@ public class ReviewActivity extends AppCompatActivity {
                                 try {
                                     reviewModel.setName(documentSnapshot.get("name").toString());
                                     reviewModel.setReview(documentSnapshot.get("review").toString());
+                                    reviewModel.setTotalStarGiven(Double.parseDouble(documentSnapshot.get("totalStarGiven").toString()));
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }

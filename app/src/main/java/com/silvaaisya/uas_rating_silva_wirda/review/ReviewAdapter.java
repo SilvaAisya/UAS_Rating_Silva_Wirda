@@ -14,6 +14,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder> {
@@ -36,6 +37,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
     public void onBindViewHolder(@NonNull ReviewViewHolder holder, int position) {
 
         ReviewModel model = listReview.get(position);
+        holder.totalStarRating.setRating(Float.parseFloat(String.valueOf(model.getTotalStarGiven())));
         holder.tvDescReview.setText(model.getReview());
         holder.tvNama.setText(model.getName());
     }
@@ -50,6 +52,8 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
 
         @BindView(R.id.tv_nama)
         TextView tvNama;
+        @BindView(R.id.total_star_rating)
+        MaterialRatingBar totalStarRating;
         @BindView(R.id.tv_desc_review)
         TextView tvDescReview;
 
